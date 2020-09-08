@@ -38,7 +38,9 @@
           >
             <v-row>
               <v-col md="8">
-                <v-text-field>
+                <v-text-field
+                  placeholder=""
+                >
                   <template v-slot:label>
                     <v-icon>mdi-magnify</v-icon>
                   </template>
@@ -50,7 +52,6 @@
                   :items="metroItems"
                   attach
                   chips
-                  single-line="true"
                   label="Метро"
                   multiple
                   class="metro-select"
@@ -214,12 +215,14 @@ export default {
 
 <style>
   .metro-select.v-select.v-select--chips .v-select__selections {
-    /* min-height: 0 !important; */
+    height: 32px !important;
+    min-height: 32px;
   }
   .v-chip.v-size--default {
     /* height: 20px !important; */
   }
   .v-select__selections {
+    height: 32px !important;
     /* overflow: hidden !important; */
   }
   .good-item-card {
